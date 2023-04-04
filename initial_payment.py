@@ -9,6 +9,8 @@ from setup import *
 
 
 def initial_payment():
+    # set balance to number user has entered
     balance = get_valid_input(f"How much would you like to play Lucky Unicorn with? (${ROUND_PRICE} - ${MAX_SPEND}) ",
                               float, [], False, ROUND_PRICE, MAX_SPEND)
+    # start the round
     start_round(balance)

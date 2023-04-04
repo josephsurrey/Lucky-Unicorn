@@ -19,4 +19,5 @@ def instructions():
     else:
         # print instructions if the user has not played before
         print(INSTRUCTIONS)
+        # run initial_payment
         initial_payment()
