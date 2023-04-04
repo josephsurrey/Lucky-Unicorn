@@ -9,7 +9,7 @@ convert_to_uppercase is boolean, and if true converts strings to uppercase befor
 """
 
 
-def get_valid_input(prompt, input_type, valid_input, convert_to_uppercase, input_min=0, input_max=0):
+def get_valid_input(prompt, input_type, valid_input, convert_to_uppercase=False, input_min=0, input_max=0):
     # Loop that runs until a valid input is achieved
     while True:
         user_input = input(prompt)
