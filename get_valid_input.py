@@ -1,13 +1,14 @@
 """Written by Joseph Surrey, 4/04/2023
 
 Function to get a valid input from the user.
-Takes 5 input variables, prompt is what the function should prompt the user,
+Takes 6 input variables, prompt is what the function should prompt the user,
 input_type is the type that the input should be,
 valid_input is a list of valid variables (only used if there are a limited number of variables)
 input_min and input_max are variables used if a valid input is in a range of numbers
+convert_to_uppercase is boolean, and if true converts strings to uppercase before returning user input
 """
 
-def get_valid_input(prompt, input_type, valid_input, input_min, input_max):
+def get_valid_input(prompt, input_type, valid_input, input_min, input_max, convert_to_uppercase):
     # Loop that runs until a valid input is achieved
     while True:
         user_input = input(prompt)
@@ -30,5 +31,8 @@ def get_valid_input(prompt, input_type, valid_input, input_min, input_max):
                 # Print error message if user input is not within range
                 print("Invalid Input")
                 continue
+        # Converts strings to uppercase if convert_to_uppercase is True
+        if input_type == str and convert_to_uppercase is True:
+            user_input = user_input.upper
         # Return user input if it is valid
         return user_input
