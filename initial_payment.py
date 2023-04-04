@@ -4,9 +4,10 @@ Initial payment function for Lucky Unicorn game
 
 from get_valid_input import get_valid_input
 from start_round import start_round
+from setup import *
 
 
 def initial_payment():
-    balance = get_valid_input("How much would you like to play Lucky Unicorn with? ($1 - $10) ",
-                              float, [], False, 1, 10)
+    balance = get_valid_input(f"How much would you like to play Lucky Unicorn with? (${ROUND_PRICE} - ${MAX_SPEND}) ",
+                              float, [], False, ROUND_PRICE, MAX_SPEND)
     start_round(balance)
