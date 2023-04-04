@@ -8,7 +8,8 @@ input_min and input_max are variables used if a valid input is in a range of num
 convert_to_uppercase is boolean, and if true converts strings to uppercase before returning user input
 """
 
-def get_valid_input(prompt, input_type, valid_input, input_min, input_max, convert_to_uppercase):
+
+def get_valid_input(prompt, input_type, valid_input, convert_to_uppercase, input_min, input_max):
     # Loop that runs until a valid input is achieved
     while True:
         user_input = input(prompt)
