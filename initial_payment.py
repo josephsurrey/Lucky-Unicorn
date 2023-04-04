@@ -2,6 +2,7 @@
 Initial payment function for Lucky Unicorn game
 """
 
+# import information from other files
 from get_valid_input import get_valid_input
 from start_round import start_round
 from setup import *
